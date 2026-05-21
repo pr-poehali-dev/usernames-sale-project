@@ -404,7 +404,20 @@ export default function Index() {
                   color: "#fff",
                   fontFamily: "'Montserrat', sans-serif",
                 }}>
-                Написать менеджеру · {selectedFriend.price} ₽ ✈️
+                Купить · {selectedFriend.price} ₽ ✨
+              </a>
+
+              <a
+                href="https://t.me/People_5212"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl text-sm tracking-wider uppercase transition-all hover:bg-white/10 mt-3"
+                style={{
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  color: "rgba(255,255,255,0.5)",
+                  fontFamily: "'Montserrat', sans-serif",
+                }}>
+                Задать вопрос менеджеру
               </a>
             </div>
           </div>
