@@ -392,7 +392,11 @@ export default function Index() {
                 ))}
               </div>
 
-              <button className="w-full py-3 rounded-2xl font-medium text-sm tracking-wider uppercase transition-all hover:opacity-90"
+              <a
+                href={`https://t.me/People_5212?text=Привет! Хочу узнать про ${selectedFriend.name} (${selectedFriend.username}) · ${selectedFriend.price} ₽`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl font-medium text-sm tracking-wider uppercase transition-all hover:opacity-90"
                 style={{
                   background: selectedFriend.price === 350
                     ? "linear-gradient(135deg, #c084fc, #818cf8)"
@@ -400,8 +404,8 @@ export default function Index() {
                   color: "#fff",
                   fontFamily: "'Montserrat', sans-serif",
                 }}>
-                Написать · {selectedFriend.price} ₽ ✨
-              </button>
+                Написать менеджеру · {selectedFriend.price} ₽ ✈️
+              </a>
             </div>
           </div>
         </div>
