@@ -7,60 +7,55 @@ const friends = [
     username: "@nastya_life",
     name: "Настя",
     emoji: "🌸",
-    photo: "https://cdn.poehali.dev/files/891dfd70-de2f-41be-b37f-9b1c88390ac5.jpg",
+    photo: "https://cdn.poehali.dev/projects/fa594141-9070-4062-8094-2e9997d3ba58/bucket/da55e6be-e851-4c74-aa05-8694a7b50c76.jpg",
     description: "Моя лучшая подруга с первого класса. Любит кофе, закаты и долгие прогулки по городу. Всегда знает, что сказать в нужный момент.",
     tags: ["кофе", "фото", "мода"],
     color: "#f472b6",
+    price: 250,
   },
   {
     id: 2,
     username: "@dasha.ok",
     name: "Даша",
     emoji: "✨",
-    photo: null,
+    photo: "https://cdn.poehali.dev/projects/fa594141-9070-4062-8094-2e9997d3ba58/bucket/a622a82d-f98e-4b2e-8b10-76c082a3c46c.jpg",
     description: "Художница и мечтательница. Рисует акварелью и знает все лучшие кафе в городе. С ней всегда весело и творчески.",
     tags: ["арт", "кафе", "музыка"],
     color: "#c084fc",
+    price: 350,
   },
   {
     id: 3,
     username: "@masha.world",
     name: "Маша",
     emoji: "🦋",
-    photo: null,
+    photo: "https://cdn.poehali.dev/projects/fa594141-9070-4062-8094-2e9997d3ba58/bucket/1dd1686b-a845-4c92-b88b-e902e093b819.jpg",
     description: "Спортсменка и путешественница. Уже побывала в 12 странах и не собирается останавливаться. Вдохновляет своей энергией.",
     tags: ["тревел", "спорт", "фитнес"],
     color: "#fb923c",
+    price: 250,
   },
   {
     id: 4,
     username: "@lera.vibes",
     name: "Лера",
     emoji: "🌙",
-    photo: null,
+    photo: "https://cdn.poehali.dev/projects/fa594141-9070-4062-8094-2e9997d3ba58/bucket/4dc18350-d588-472c-b213-85310c5b4334.jpg",
     description: "Книжный червь и философ. Знает ответы на все вопросы или делает вид. Лучший собеседник в 3 ночи.",
     tags: ["книги", "кино", "чай"],
     color: "#34d399",
+    price: 250,
   },
   {
     id: 5,
     username: "@sonya.cool",
     name: "Соня",
     emoji: "🍒",
-    photo: null,
+    photo: "https://cdn.poehali.dev/projects/fa594141-9070-4062-8094-2e9997d3ba58/bucket/10acab54-2e25-40b9-8654-476227945db6.jpg",
     description: "Танцовщица и вечная оптимистка. Умеет превратить любой вечер в праздник. Самая заразительная улыбка в компании.",
     tags: ["танцы", "вечеринки", "стиль"],
     color: "#f87171",
-  },
-  {
-    id: 6,
-    username: "@katya.jpeg",
-    name: "Катя",
-    emoji: "🎀",
-    photo: null,
-    description: "Фотограф и визажист в одном лице. Делает всех красивее и снимает лучшие кадры. Без неё ни одна фотосессия.",
-    tags: ["фото", "макияж", "beauty"],
-    color: "#fbbf24",
+    price: 250,
   },
 ];
 
@@ -112,18 +107,15 @@ export default function Index() {
       {activeSection === "home" && (
         <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 relative overflow-hidden">
 
-          {/* Background decorative orbs */}
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] pointer-events-none"
             style={{ background: "radial-gradient(circle, rgba(244,114,182,0.12), transparent 70%)" }} />
           <div className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full blur-[100px] pointer-events-none"
             style={{ background: "radial-gradient(circle, rgba(192,132,252,0.10), transparent 70%)" }} />
 
-          {/* Rotating ring */}
           <div className="absolute w-[600px] h-[600px] rounded-full animate-spin-slow pointer-events-none opacity-20"
             style={{ border: "1px solid rgba(244,114,182,0.3)", borderTopColor: "transparent" }} />
 
           <div className="relative z-10 text-center max-w-2xl mx-auto">
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 animate-fade-up"
               style={{ background: "rgba(244,114,182,0.1)", border: "1px solid rgba(244,114,182,0.2)" }}>
               <span className="text-xs tracking-[0.2em] uppercase" style={{ color: "#f472b6" }}>
@@ -131,7 +123,6 @@ export default function Index() {
               </span>
             </div>
 
-            {/* Title */}
             <h1 className="mb-4 animate-fade-up delay-100"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
@@ -177,7 +168,6 @@ export default function Index() {
               </button>
             </div>
 
-            {/* Stats row */}
             <div className="flex items-center justify-center gap-12 mt-16 animate-fade-up delay-500">
               {[
                 { num: friends.length, label: "подруг" },
@@ -200,7 +190,6 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Scroll hint */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float opacity-30">
             <span className="text-xs tracking-widest uppercase text-white/40"
               style={{ fontFamily: "'Montserrat', sans-serif" }}>scroll</span>
@@ -214,25 +203,22 @@ export default function Index() {
         <section className="min-h-screen pt-24 pb-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
 
-            {/* Header */}
             <div className="text-center mb-16 animate-fade-up">
-              <p className="text-xs tracking-[0.3em] uppercase mb-3 animate-fade-up"
+              <p className="text-xs tracking-[0.3em] uppercase mb-3"
                 style={{ color: "#f472b6", fontFamily: "'Montserrat', sans-serif" }}>
                 ✦ Мои подруги ✦
               </p>
-              <h2 className="animate-fade-up"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "clamp(2.5rem, 6vw, 5rem)",
-                  fontWeight: 300,
-                  color: "#f5f0ea",
-                  lineHeight: 1,
-                }}>
+              <h2 style={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontWeight: 300,
+                color: "#f5f0ea",
+                lineHeight: 1,
+              }}>
                 Каталог <span className="shimmer-text italic">подруг</span>
               </h2>
             </div>
 
-            {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {friends.map((friend, i) => (
                 <button
@@ -247,8 +233,7 @@ export default function Index() {
                     opacity: 0,
                   }}>
 
-                  {/* Photo / avatar */}
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     {friend.photo ? (
                       <img
                         src={friend.photo}
@@ -258,17 +243,27 @@ export default function Index() {
                     ) : (
                       <AvatarPlaceholder name={friend.name} emoji={friend.emoji} color={friend.color} />
                     )}
-                    {/* Gradient overlay */}
                     <div className="absolute inset-0"
-                      style={{ background: "linear-gradient(to top, #111111 0%, transparent 60%)" }} />
+                      style={{ background: "linear-gradient(to top, #111111 0%, transparent 55%)" }} />
 
-                    {/* Emoji badge */}
+                    {/* Price badge */}
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold"
+                      style={{
+                        background: friend.price === 350
+                          ? "linear-gradient(135deg, #c084fc, #818cf8)"
+                          : "linear-gradient(135deg, #f472b6, #fb923c)",
+                        color: "#fff",
+                        fontFamily: "'Montserrat', sans-serif",
+                        boxShadow: "0 2px 12px rgba(0,0,0,0.4)",
+                      }}>
+                      {friend.price} ₽
+                    </div>
+
                     <div className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center glass text-lg">
                       {friend.emoji}
                     </div>
                   </div>
 
-                  {/* Info */}
                   <div className="p-5">
                     <div className="flex items-baseline gap-2 mb-1">
                       <h3 style={{
@@ -302,7 +297,6 @@ export default function Index() {
                     </div>
                   </div>
 
-                  {/* Hover line */}
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 transition-all duration-300 opacity-0 group-hover:opacity-100"
                     style={{ background: `linear-gradient(to right, transparent, ${friend.color}, transparent)` }} />
                 </button>
@@ -327,8 +321,7 @@ export default function Index() {
             }}
             onClick={(e) => e.stopPropagation()}>
 
-            {/* Photo header */}
-            <div className="relative h-64">
+            <div className="relative h-72">
               {selectedFriend.photo ? (
                 <img
                   src={selectedFriend.photo}
@@ -341,20 +334,30 @@ export default function Index() {
               <div className="absolute inset-0"
                 style={{ background: "linear-gradient(to top, #111111 0%, transparent 50%)" }} />
 
-              {/* Close */}
               <button
                 onClick={() => setSelectedFriend(null)}
                 className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center glass hover:bg-white/10 transition-colors">
                 <Icon name="X" size={16} />
               </button>
 
-              {/* Big emoji */}
+              {/* Price in modal */}
+              <div className="absolute top-4 left-4 px-4 py-1.5 rounded-full text-sm font-bold"
+                style={{
+                  background: selectedFriend.price === 350
+                    ? "linear-gradient(135deg, #c084fc, #818cf8)"
+                    : "linear-gradient(135deg, #f472b6, #fb923c)",
+                  color: "#fff",
+                  fontFamily: "'Montserrat', sans-serif",
+                  boxShadow: "0 2px 20px rgba(0,0,0,0.5)",
+                }}>
+                {selectedFriend.price} ₽
+              </div>
+
               <div className="absolute bottom-4 left-6 text-4xl animate-float">
                 {selectedFriend.emoji}
               </div>
             </div>
 
-            {/* Body */}
             <div className="p-6">
               <div className="flex items-baseline gap-3 mb-2">
                 <h2 style={{
@@ -391,11 +394,13 @@ export default function Index() {
 
               <button className="w-full py-3 rounded-2xl font-medium text-sm tracking-wider uppercase transition-all hover:opacity-90"
                 style={{
-                  background: `linear-gradient(135deg, ${selectedFriend.color}, ${selectedFriend.color}aa)`,
-                  color: "#0a0a0a",
+                  background: selectedFriend.price === 350
+                    ? "linear-gradient(135deg, #c084fc, #818cf8)"
+                    : "linear-gradient(135deg, #f472b6, #fb923c)",
+                  color: "#fff",
                   fontFamily: "'Montserrat', sans-serif",
                 }}>
-                Написать ✨
+                Написать · {selectedFriend.price} ₽ ✨
               </button>
             </div>
           </div>
